@@ -26,6 +26,31 @@ TODO?
 9.0.0 FEATURES, ETC.?
 ////
 
+
+== Salesforce Connector 8.4.0 - October 26, 2017
+
+=== Version 8.4.0 Compatibility
+Salesforce connector version 8.3.1 is compatible with:
+
+[%header,cols="2*a"]
+|===
+|Application/Service|Version
+|Mule Runtime|Mule Enterprise Edition 3.5.2 and newer
+|Anypoint Studio|Only works with Studio 5.4.0 and newer
+|Salesforce|v37.0, v38.0, v39.0, v40.0
+|===
+
+=== Version 8.4.0 Features
+* Added support for salesforce API v40.0
+* Support for publishing platform event messages: new operation named: Publish Platform Event Message is available
+* Added new metadata types
+* Provided 3 new operations: Convert Lead, Find Duplicates By Ids, Change Own Password
+
+=== Version 8.4.0 Fixed in this Release
+* Apex SOAP call does not work in case that reconnection is triggered*. In previous versions when the session was invalidated the connector throwed an error with this message _Failed to invoke invokeApexSoapMethod_ caused by this exception: _org.apache.cxf.binding.soap.SoapFaul: No operation specified in request (the Body element has no child elements)_. Currently the payload is retained and the calls work fine after the reconnection.
+* *There was a leak when the Salesforce connector performed a reconnection*. In previous versions when salesforce connector performed a re-connection HttpClient objects were leaking. In current version there are no leaks when reconnecting.
+* *No error received by clients when the _Organization total events daily limit was exceeded_ *. In the previous version when there was an error of type:  _403::Organization total events daily limit exceeded _ the connector throwed no error or Exception. In current version besides throwing an exception a notification will be fired. The _notification id_ for this error will always be _100888_ and it will also contain the appropriate message. 
+
 == Salesforce Connector 8.3.1 - July 3, 2017
 
 Salesforce connector version 8.3.1 is compatible with:
