@@ -20,7 +20,7 @@ Shows the file name `<project name>.raml` for RAML code.
 
 * RAML editor
 +
-Contains generated code: the default RAML version 1.0, the name of the API, and the API version that you provided to API Manager.
+Contains generated code: the default RAML version 1.0, the name of the API, and the API version.
 
 * RAML Documentation 
 +
