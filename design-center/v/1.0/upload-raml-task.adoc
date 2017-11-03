@@ -24,11 +24,8 @@ The valid indicator appears below the main file. Do not continue unless the file
 +
 . Click Show Advanced and optionally change the Asset ID, which is the unique name of the asset in Exchange. Also, you can view the Group ID of the asset. 
 +
-. In Publish To, different options appear, depending on your design:
-+
-* To publish a new API specification, select Exchange or Exchange and API Manager. 
-* To update an existing API specification, select Exchange, Exchange and API Manager, or API Manager. 
-. In Publish API Specification to Exchange, click the link below the message "Successfully published to Exchange."
+. Click Publish. 
+. Click the link below the message "Successfully published to Exchange."
 +
 In Exchange, you see the API specification.
 
